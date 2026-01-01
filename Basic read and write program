@@ -1,0 +1,17 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main() {
+    // Write to file
+    ofstream outfile("test.txt");
+    outfile << "Hello!";
+    outfile.close();
+
+    // Read from file
+    ifstream infile("test.txt");
+    string data;
+    infile >> data;
+    cout << "File data: " << data << endl;
+    infile.close();
+    return 0;
+}
